@@ -1,0 +1,14 @@
+[user]
+	name = Đặng Minh Dũng
+	email = dungdm93@live.com
+	signingkey = F3D3396F1C0547F4A011E3F630B00965500D018B
+[core]
+	editor = vim
+	autocrlf = input
+[commit]
+	gpgsign = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
