@@ -1,0 +1,7 @@
+{
+    "terminal.integrated.fontFamily": "FiraCode Nerd Font",
+    "workbench.colorTheme": "Default Dark+",
+    "workbench.iconTheme": "vscode-icons",
+    "window.titleBarStyle": "custom",
+    "window.zoomLevel": 1,
+}
