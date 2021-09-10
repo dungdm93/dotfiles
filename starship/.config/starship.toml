@@ -1,0 +1,194 @@
+[aws]
+format = '\[[$symbol($profile)(\($region\))(\[$duration\])]($style)\]'
+symbol = ' '
+
+# [azure]
+# symbol = 'ﴃ '
+
+[cmake]
+format = '\[[$symbol($version)]($style)\]'
+# symbol = '? '
+
+[cmd_duration]
+format = '[  $duration]($style)'
+min_time = 50
+show_milliseconds = true
+
+# [clojure]
+# format = '\[[$symbol($version)]($style)\]'
+# symbol = ' '
+
+[conda]
+format = '\[[$symbol$environment]($style)\]'
+symbol = ' '
+
+[crystal]
+format = '\[[$symbol$environment]($style)\]'
+# symbol = '? '
+
+[dart]
+format = '\[[$symbol($version)]($style)\]'
+symbol = ' '
+
+[deno]
+format = '\[[$symbol($version)]($style)\]'
+# symbol = '? '
+
+[directory]
+fish_style_pwd_dir_length = 1
+read_only = ' '
+truncation_symbol = '.../'
+
+[docker_context]
+format = '\[[$symbol$context]($style)\]'
+symbol = ' '
+
+[dotnet]
+format = '\[[$symbol($version)(🎯 $tfm)]($style)\]'
+symbol = ' '
+
+[elixir]
+format = '\[[$symbol($version \(OTP $otp_version\))]($style)\]'
+symbol = ' '
+
+[elm]
+format = '\[[$symbol($version)]($style)\]'
+symbol = ' '
+
+[erlang]
+format = '\[[$symbol($version)]($style)\]'
+symbol = ' '
+
+# [fsharp]
+# format = '\[[$symbol($version)]($style)\]'
+# symbol = ' '
+
+[gcloud]
+format = '\[[$symbol$account(\($project\))]($style)\]'
+symbol = ' '
+
+[git_branch]
+symbol = ' '
+
+[golang]
+format = '\[[$symbol($version)]($style)\]'
+symbol = ' '
+
+# [haskell]
+# format = '\[[$symbol($version)]($style)\]'
+# symbol = ' '
+
+[helm]
+format = '\[[$symbol($version)]($style)\]'
+# symbol = '? '
+
+[hg_branch]
+symbol = ' '
+
+[java]
+format = '\[[$symbol($version)]($style)\]'
+symbol = ' '
+
+[julia]
+format = '\[[$symbol($version)]($style)\]'
+symbol = ' '
+
+[kotlin]
+format = '\[[$symbol($version)]($style)\]'
+# symbol = '? '
+
+[kubernetes]
+disabled = false
+symbol = "☸ "
+
+[lua]
+format = '\[[$symbol($version)]($style)\]'
+symbol = ' '
+
+[memory_usage]
+symbol = ' '
+
+[nim]
+format = '\[[$symbol($version)]($style)\]'
+symbol = ' '
+
+[nix_shell]
+format = '\[[$symbol$state( \($name\))]($style)\]'
+symbol = ' '
+
+[nodejs]
+format = '\[[$symbol($version)]($style)\]'
+symbol = ' '
+
+[ocaml]
+format = '\[[$symbol($version)(\($switch_indicator$switch_name\))]($style)\]'
+# symbol = '? '
+
+[openstack]
+format = '\[[$symbol$cloud(\($project\))]($style)\]'
+# symbol = '? '
+
+[package]
+format = '\[[$symbol$version]($style)\]'
+symbol = ' '
+
+[perl]
+format = '\[[$symbol($version)]($style)\]'
+symbol = ' '
+
+[php]
+format = '\[[$symbol($version)]($style)\]'
+symbol = ' '
+
+[purescript]
+format = '\[[$symbol($version)]($style)\]'
+# symbol = '? '
+
+[python]
+format = '\[[$symbol($version)]($style)\]'
+symbol = ' '
+
+[rlang]
+format = '\[[$symbol($version)]($style)\]'
+# symbol = '? '
+
+[red]
+format = '\[[$symbol($version)]($style)\]'
+# symbol = '? '
+
+[ruby]
+format = '\[[$symbol($version)]($style)\]'
+symbol = ' '
+
+[rust]
+format = '\[[$symbol($version)]($style)\]'
+symbol = ' '
+
+[scala]
+format = '\[[$symbol($version)]($style)\]'
+symbol = ' '
+
+[shlvl]
+disabled = false
+symbol = ' '
+threshold = 1
+
+[swift]
+format = '\[[$symbol($version)]($style)\]'
+symbol = 'ﯣ '
+
+[terraform]
+format = '\[[$symbol$workspace]($style)\]'
+# symbol = '? '
+
+[vagrant]
+format = '\[[$symbol($version)]($style)\]'
+# symbol = '? '
+
+[vlang]
+format = '\[[$symbol($version)]($style)\]'
+# symbol = '? '
+
+[zig]
+format = '\[[$symbol($version)]($style)\]'
+# symbol = '⚡️ '
