@@ -1,3 +1,11 @@
+# https://github.com/alacritty/alacritty/issues/2956#issuecomment-549505530
+shell:
+  program: /bin/bash
+  args:
+  - -l
+  - -c
+  - tmux attach || tmux
+
 font:
   normal:
     family: FiraCode Nerd Font
