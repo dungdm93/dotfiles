@@ -1,3 +1,26 @@
+format = """
+$username\
+$hostname\
+$directory\
+$git_branch\
+$git_commit\
+$git_status\
+$git_state\
+$kubernetes\
+$golang\
+$deno\
+$nodejs\
+$conda\
+$python\
+$java\
+$scala\
+$cmd_duration\
+$line_break\
+$shlvl\
+$time\
+$character
+"""
+
 [aws]
 format = '\[[$symbol($profile)(\($region\))(\[$duration\])]($style)\]'
 symbol = ' '
@@ -35,9 +58,11 @@ format = '\[[$symbol($version)]($style)\]'
 # symbol = '? '
 
 [directory]
-fish_style_pwd_dir_length = 1
+format = "\b[](bg:$style)[$path](fg:white bg:$style)[$read_only](fg:$read_only_style bg:$style)[](fg:$style)"
+style = '#4169e1'
 read_only = ' '
 truncation_symbol = '.../'
+fish_style_pwd_dir_length = 1
 
 [docker_context]
 format = '\[[$symbol$context]($style)\]'
@@ -107,6 +132,10 @@ format = '\[[$symbol($version)]($style)\]'
 
 [hg_branch]
 symbol = ' '
+
+[hostname]
+format = "\b[@$hostname](fg:black bg:white)[](fg:white)"
+# ssh_only = false
 
 [java]
 format = '\[[$symbol($version)]($style)\]'
@@ -207,6 +236,17 @@ symbol = 'ﯣ '
 [terraform]
 format = '\[[$symbol$workspace]($style)\]'
 # symbol = '? '
+
+[time]
+# disabled = false
+format = "[](bg:$style)[ $time](fg:white bg:$style)[](fg:$style)"
+style = "#4169e1"
+
+[username]
+format = "[$user](fg:$style bg:white)[](fg:white)"
+# show_always = true
+style_root = "red"
+style_user = "black"
 
 [vagrant]
 format = '\[[$symbol($version)]($style)\]'
