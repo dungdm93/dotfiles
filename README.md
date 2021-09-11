@@ -20,3 +20,6 @@ stow <dir>
 * [dotfiles.github.io](https://dotfiles.github.io/)
 * [Managing dotfiles with GNU stow](https://alexpearce.me/2016/02/managing-dotfiles-with-stow/)
 * [Managing dotfiles with Git bare repository](https://www.atlassian.com/git/tutorials/dotfiles) | [YouTube](https://youtu.be/tBoLDpTWVOM)
+
+See also:
+* [Command Line history](https://devblogs.microsoft.com/commandline/windows-command-line-backgrounder/)
