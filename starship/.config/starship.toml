@@ -68,7 +68,30 @@ format = '\[[$symbol$account(\($project\))]($style)\]'
 symbol = ' '
 
 [git_branch]
+format = "\b[](fg:#4169e1 bg:$style)[$symbol$branch](fg:white bg:$style)[](fg:$style)"
+style = '#f05133'
 symbol = ' '
+
+[git_commit]
+format = "\b[ ﰖ $hash](fg:white bg:$style)[](fg:$style)"
+style = '#f05133'
+
+[git_status]
+format = "\b[ $ahead_behind](fg:white bg:$style)([| $conflicted$stashed](fg:white bg:$style))[](fg:$style)"
+style = '#f05133'
+
+ahead = '${count}⇡ '
+behind = '${count}⇣ '
+diverged = '${ahead_count}⇡${behind_count}⇣ '
+
+conflicted = '${count}⚠ '
+stashed = '${count} '
+
+staged = '${count} '    # (+) new & modified fils in the staging area
+deleted = '${count} '   # (-) deleted files in the staging area
+renamed = '${count} '   # (») renamed files in the staging area
+modified = '${count} '  # (~) modified files in the working directory
+untracked = '${count}? ' # (?) untracked files in the working directory
 
 [golang]
 format = '\[[$symbol($version)]($style)\]'
