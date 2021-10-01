@@ -128,7 +128,7 @@ symbol = ' '
 
 [helm]
 format = '\[[$symbol($version)]($style)\]'
-# symbol = '? '
+symbol = '⎈ '
 
 [hg_branch]
 symbol = ' '
