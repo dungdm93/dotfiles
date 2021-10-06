@@ -140,6 +140,14 @@ if command -v crictl >/dev/null 2>&1; then
     source <(crictl completion)
 fi
 
+if command -v vault >/dev/null 2>&1; then
+    complete -C "$(which vault)" vault
+fi
+
+if command -v terraform >/dev/null 2>&1; then
+    complete -C "$(which terraform)" terraform
+fi
+
 export CONDA_DIR="$HOME/.conda"
 
 # >>> conda initialize >>>
