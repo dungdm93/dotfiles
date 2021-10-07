@@ -126,7 +126,9 @@ export NVM_DIR="$HOME/.nvm"
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$SDKMAN_DIR/bin/sdkman-init.sh" ]] && source "$SDKMAN_DIR/bin/sdkman-init.sh"
 
-export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$HOME/go/bin:$PATH"
+export GO_HOME="/usr/local/go/"
+
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$HOME/go/bin:$GO_HOME/bin/:$PATH"
 
 if command -v kubectl >/dev/null 2>&1; then
     source <(kubectl completion bash)
