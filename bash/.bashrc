@@ -144,6 +144,7 @@ fi
 
 if command -v vault >/dev/null 2>&1; then
     complete -C "$(which vault)" vault
+    export VAULT_ADDR=http://localhost:8200
 fi
 
 if command -v terraform >/dev/null 2>&1; then
