@@ -4,5 +4,6 @@
     "workbench.colorTheme": "Default Dark+",
     "workbench.iconTheme": "vscode-icons",
     "window.titleBarStyle": "custom",
+    "asciidoc.use_kroki": true,
     "window.zoomLevel": 1,
 }
