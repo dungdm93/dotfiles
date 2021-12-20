@@ -142,6 +142,10 @@ if command -v crictl >/dev/null 2>&1; then
     source <(crictl completion)
 fi
 
+if command -v flux >/dev/null 2>&1; then
+    source <(flux completion bash)
+fi
+
 if command -v vault >/dev/null 2>&1; then
     complete -C "$(which vault)" vault
     export VAULT_ADDR=http://localhost:8200
