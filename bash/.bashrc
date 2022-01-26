@@ -175,3 +175,13 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+
+# ref: https://github.com/apache/avro/tree/master/lang/java/tools
+alias avro-tools="java -jar $HOME/.local/bin/avro-tools-1.11.0.jar"
+
+# ref: https://orc.apache.org/docs/java-tools.html
+alias orc-tools="java -jar $HOME/.local/bin/orc-tools-1.7.2-uber.jar"
+
+# NOTE: newer parquet-tools version renamed to parquet-cli
+# ref: https://github.com/apache/parquet-mr/tree/master/parquet-cli
+alias parquet-tools="java -jar $HOME/.local/bin/parquet-tools-1.8.3.jar"
