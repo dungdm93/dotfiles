@@ -130,6 +130,9 @@ export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
 if command -v kubectl >/dev/null 2>&1; then
     source <(kubectl completion bash)
+
+    alias k=kubectl
+    complete -o default -F __start_kubectl k
 fi
 
 if command -v helm >/dev/null 2>&1; then
