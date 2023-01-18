@@ -155,6 +155,10 @@ if command -v buf >/dev/null 2>&1; then
     source <(buf completion bash)
 fi
 
+if command -v yq >/dev/null 2>&1; then
+    source <(yq shell-completion bash)
+fi
+
 if command -v vault >/dev/null 2>&1; then
     complete -C "$(which vault)" vault
     export VAULT_ADDR=http://localhost:8200
