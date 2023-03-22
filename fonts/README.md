@@ -4,6 +4,10 @@ fonts
 * [Nerd Fonts](https://www.nerdfonts.com/)
 * [Powerline](https://github.com/powerline/fonts)
 
+## Installation
+
+[ref](https://itsfoss.com/install-fonts-ubuntu/)
+
 ## Terminal
 > [Change the font of various **Terminal emulators**](https://askubuntu.com/a/283831)
 
