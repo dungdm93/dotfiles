@@ -126,6 +126,23 @@ export NVM_DIR="$HOME/.nvm"
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$SDKMAN_DIR/bin/sdkman-init.sh" ]] && source "$SDKMAN_DIR/bin/sdkman-init.sh"
 
+export CONDA_DIR="$HOME/.conda"
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$($CONDA_DIR/bin/conda 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "$CONDA_DIR/etc/profile.d/conda.sh" ]; then
+        . "$CONDA_DIR/etc/profile.d/conda.sh"
+    else
+        export PATH="$CONDA_DIR/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
 if command -v kubectl >/dev/null 2>&1; then
@@ -168,22 +185,6 @@ if command -v terraform >/dev/null 2>&1; then
     complete -C "$(which terraform)" terraform
 fi
 
-export CONDA_DIR="$HOME/.conda"
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$($CONDA_DIR/bin/conda 'shell.bash' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "$CONDA_DIR/etc/profile.d/conda.sh" ]; then
-        . "$CONDA_DIR/etc/profile.d/conda.sh"
-    else
-        export PATH="$CONDA_DIR/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
 
 # ref: https://github.com/apache/avro/tree/master/lang/java/tools
 alias avro-tools="java -jar $HOME/.local/bin/avro-tools-1.11.0.jar"
