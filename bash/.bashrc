@@ -143,7 +143,9 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+export GOROOT=/usr/local/go
+export GOPATH=$HOME/go
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$GOPATH/bin:$GOROOT/bin:$PATH"
 
 if command -v kubectl >/dev/null 2>&1; then
     source <(kubectl completion bash)
