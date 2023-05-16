@@ -6,4 +6,5 @@
     "window.titleBarStyle": "custom",
     "asciidoc.use_kroki": true,
     "window.zoomLevel": 1,
+    "editor.accessibilitySupport": "off",
 }
