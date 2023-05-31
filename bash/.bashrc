@@ -170,6 +170,10 @@ if command -v opa >/dev/null 2>&1; then
     source <(opa completion bash)
 fi
 
+if command -v oras >/dev/null 2>&1; then
+    source <(oras completion bash)
+fi
+
 if command -v buf >/dev/null 2>&1; then
     source <(buf completion bash)
 fi
