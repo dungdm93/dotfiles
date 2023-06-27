@@ -195,6 +195,9 @@ if command -v terraform >/dev/null 2>&1; then
     complete -C "$(which terraform)" terraform
 fi
 
+if command -v mc >/dev/null 2>&1; then
+    complete -C "$(which mc)" mc
+fi
 
 # ref: https://github.com/apache/avro/tree/master/lang/java/tools
 alias avro-tools="java -jar $HOME/.local/bin/avro-tools-1.11.0.jar"
