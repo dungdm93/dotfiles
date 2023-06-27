@@ -162,6 +162,10 @@ if command -v crictl >/dev/null 2>&1; then
     source <(crictl completion)
 fi
 
+if command -v ig >/dev/null 2>&1; then
+    source <(ig completion bash)
+fi
+
 if command -v flux >/dev/null 2>&1; then
     source <(flux completion bash)
 fi
