@@ -158,6 +158,10 @@ if command -v helm >/dev/null 2>&1; then
     source <(helm completion bash)
 fi
 
+if command -v helmfile >/dev/null 2>&1; then
+    source <(helmfile completion bash)
+fi
+
 if command -v crictl >/dev/null 2>&1; then
     source <(crictl completion)
 fi
