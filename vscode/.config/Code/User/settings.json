@@ -1,5 +1,12 @@
 {
     "terminal.integrated.fontFamily": "FiraCode Nerd Font",
+    "terminal.integrated.defaultProfile.windows": "WSL",
+    "terminal.integrated.profiles.windows": {
+        "WSL": {
+            "path": "${env:windir}\\System32\\wsl.exe",
+            "icon": "terminal-linux"
+        },
+    },
     "workbench.editor.untitled.hint": "hidden",
     "workbench.colorTheme": "Default Dark+",
     "workbench.iconTheme": "vscode-icons",
