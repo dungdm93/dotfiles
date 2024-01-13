@@ -152,15 +152,17 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-export GOROOT=/usr/local/go
-export GOPATH=$HOME/go
-export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$GOPATH/bin:$GOROOT/bin:$PATH"
+if has go; then
+    export PATH="$HOME/go/bin:$PATH"
+fi
 
 if has kubectl; then
     source <(kubectl completion bash)
 
     alias k=kubectl
     complete -o default -F __start_kubectl k
+
+    export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 fi
 
 if has helm; then

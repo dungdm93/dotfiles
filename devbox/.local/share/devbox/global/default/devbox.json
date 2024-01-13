@@ -1,9 +1,11 @@
 {
   "packages": [
     "starship@latest",
+    "go@latest",
     "kubectl@latest",
     "helmfile@latest",
     "kubernetes-helm@latest",
-    "jq@latest"
+    "jq@latest",
+    "tree@latest"
   ]
 }
