@@ -117,6 +117,10 @@ if ! shopt -oq posix; then
 fi
 
 ###############################################################
+## Install devbox & activate shell
+## curl -fsSL https://get.jetpack.io/devbox | bash
+eval "$(devbox global shellenv)"
+###############################################################
 eval "$(starship init bash)"
 
 export NVM_DIR="$HOME/.nvm"
