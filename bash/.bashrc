@@ -120,6 +120,7 @@ fi
 ## Install devbox & activate shell
 ## curl -fsSL https://get.jetpack.io/devbox | bash
 eval "$(devbox global shellenv)"
+source <(devbox completion bash)
 
 has() {
     command -v "$1" 1>/dev/null 2>&1
