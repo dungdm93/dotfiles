@@ -1,0 +1,9 @@
+{
+  "packages": [
+    "starship@latest",
+    "kubectl@latest",
+    "helmfile@latest",
+    "kubernetes-helm@latest",
+    "jq@latest"
+  ]
+}
