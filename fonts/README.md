@@ -6,7 +6,12 @@ fonts
 
 ## Installation
 
-[ref](https://itsfoss.com/install-fonts-ubuntu/)
+[ref](https://itsfoss.com/install-fonts-ubuntu/) & [Ubuntu guide](https://wiki.ubuntu.com/Fonts)
+
+In noninteractive mode, run:
+```
+fc-cache -f -v
+```
 
 ## Terminal
 > [Change the font of various **Terminal emulators**](https://askubuntu.com/a/283831)
