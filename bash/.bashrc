@@ -119,6 +119,10 @@ fi
 ###############################################################
 eval "$(starship init bash)"
 
+has() {
+    command -v "$1" 1>/dev/null 2>&1
+}
+
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh"
 [ -s "$NVM_DIR/bash_completion" ] && source "$NVM_DIR/bash_completion"
@@ -147,59 +151,59 @@ export GOROOT=/usr/local/go
 export GOPATH=$HOME/go
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$GOPATH/bin:$GOROOT/bin:$PATH"
 
-if command -v kubectl >/dev/null 2>&1; then
+if has kubectl; then
     source <(kubectl completion bash)
 
     alias k=kubectl
     complete -o default -F __start_kubectl k
 fi
 
-if command -v helm >/dev/null 2>&1; then
+if has helm; then
     source <(helm completion bash)
 fi
 
-if command -v helmfile >/dev/null 2>&1; then
+if has helmfile; then
     source <(helmfile completion bash)
 fi
 
-if command -v crictl >/dev/null 2>&1; then
+if has crictl; then
     source <(crictl completion)
 fi
 
-if command -v ig >/dev/null 2>&1; then
+if has ig; then
     source <(ig completion bash)
 fi
 
-if command -v flux >/dev/null 2>&1; then
+if has flux; then
     source <(flux completion bash)
 fi
 
-if command -v opa >/dev/null 2>&1; then
+if has opa; then
     source <(opa completion bash)
 fi
 
-if command -v oras >/dev/null 2>&1; then
+if has oras; then
     source <(oras completion bash)
 fi
 
-if command -v buf >/dev/null 2>&1; then
+if has buf; then
     source <(buf completion bash)
 fi
 
-if command -v yq >/dev/null 2>&1; then
+if has yq; then
     source <(yq shell-completion bash)
 fi
 
-if command -v vault >/dev/null 2>&1; then
+if has vault; then
     complete -C "$(which vault)" vault
     export VAULT_ADDR=http://localhost:8200
 fi
 
-if command -v terraform >/dev/null 2>&1; then
+if has terraform; then
     complete -C "$(which terraform)" terraform
 fi
 
-if command -v mc >/dev/null 2>&1; then
+if has mc; then
     complete -C "$(which mc)" mc
 fi
 
