@@ -117,6 +117,9 @@ if ! shopt -oq posix; then
 fi
 
 ###############################################################
+export PATH="$(aqua root-dir)/bin:$PATH"
+source <(aqua completion bash)
+
 eval "$(starship init bash)"
 
 has() {

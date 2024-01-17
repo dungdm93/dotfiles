@@ -1,0 +1,20 @@
+---
+# aqua - Declarative CLI Version Manager
+# https://aquaproj.github.io/
+# checksum:
+#   enabled: true
+#   require_checksum: true
+#   supported_envs:
+#   - all
+registries:
+- type: standard
+  ref: v4.120.0 # renovate: depName=aquaproj/aqua-registry
+packages:
+- name: kubernetes/kubectl@v1.26.12
+- name: helm/helm@v3.13.3
+- name: helmfile/helmfile@v0.160.0
+- name: jqlang/jq@jq-1.7.1
+- name: mikefarah/yq@v4.40.5
+- name: aquasecurity/trivy@v0.48.3
+- name: anchore/grype@v0.74.0
+- name: oras-project/oras@v1.1.0
