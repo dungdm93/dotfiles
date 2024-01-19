@@ -189,6 +189,14 @@ if has oras; then
     source <(oras completion bash)
 fi
 
+if has cosign; then
+    source <(cosign completion bash)
+fi
+
+if has gitsign; then
+    source <(gitsign completion bash)
+fi
+
 if has buf; then
     source <(buf completion bash)
 fi
