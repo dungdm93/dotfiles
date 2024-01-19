@@ -18,3 +18,5 @@ packages:
 - name: aquasecurity/trivy@v0.48.3
 - name: anchore/grype@v0.74.0
 - name: oras-project/oras@v1.1.0
+- name: sigstore/cosign@v2.2.2
+- name: sigstore/gitsign@v0.8.0
