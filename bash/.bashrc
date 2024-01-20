@@ -185,6 +185,18 @@ if has opa; then
     source <(opa completion bash)
 fi
 
+if has trivy; then
+    source <(trivy completion bash)
+fi
+
+if has grype; then
+    source <(grype completion bash)
+fi
+
+if has syft; then
+    source <(syft completion bash)
+fi
+
 if has oras; then
     source <(oras completion bash)
 fi
