@@ -201,6 +201,10 @@ if has oras; then
     source <(oras completion bash)
 fi
 
+if has crane; then
+    source <(crane completion bash)
+fi
+
 if has cosign; then
     source <(cosign completion bash)
 fi
