@@ -117,6 +117,7 @@ if ! shopt -oq posix; then
 fi
 
 ###############################################################
+export AQUA_GLOBAL_CONFIG=$HOME/aqua.yaml
 export PATH="$(aqua root-dir)/bin:$PATH"
 source <(aqua completion bash)
 
