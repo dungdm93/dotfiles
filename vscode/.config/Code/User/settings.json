@@ -7,11 +7,11 @@
             "icon": "terminal-linux"
         },
     },
-    "workbench.editor.untitled.hint": "hidden",
-    "workbench.colorTheme": "Default Dark+",
-    "workbench.iconTheme": "vscode-icons",
-    "window.titleBarStyle": "custom",
     "asciidoc.use_kroki": true,
-    "window.zoomLevel": 1,
     "editor.accessibilitySupport": "off",
+    "window.titleBarStyle": "custom",
+    "window.zoomLevel": 1,
+    "workbench.colorTheme": "Default Dark+",
+    "workbench.editor.empty.hint": "hidden",
+    "workbench.iconTheme": "vscode-icons",
 }
