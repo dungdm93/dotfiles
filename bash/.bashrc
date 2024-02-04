@@ -174,6 +174,10 @@ if has crictl; then
     source <(crictl completion)
 fi
 
+if has nerdctl; then
+    source <(nerdctl completion bash)
+fi
+
 if has ig; then
     source <(ig completion bash)
 fi
