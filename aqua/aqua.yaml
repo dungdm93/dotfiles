@@ -16,6 +16,7 @@ packages:
 - name: jqlang/jq@jq-1.7.1
 - name: mikefarah/yq@v4.40.5
 - name: hashicorp/terraform@v1.7.1
+- name: hashicorp/packer@v1.10.1
 - name: aquasecurity/trivy@v0.48.3
 - name: anchore/grype@v0.74.0
 - name: anchore/syft@v0.101.1
