@@ -158,6 +158,10 @@ export BUN_INSTALL="$HOME/.bun"
 export DENO_INSTALL="$HOME/.deno"
 export PATH=$BUN_INSTALL/bin:$DENO_INSTALL/bin:$PATH
 
+# dotnet
+export DOTNET_ROOT=$HOME/.dotnet
+export PATH=$DOTNET_ROOT:$DOTNET_ROOT/tools:$PATH
+
 if has kubectl; then
     source <(kubectl completion bash)
 
