@@ -153,6 +153,11 @@ unset __conda_setup
 
 export PATH="$HOME/go/bin:/usr/local/go/bin:$PATH"
 
+# bun & deno
+export BUN_INSTALL="$HOME/.bun"
+export DENO_INSTALL="$HOME/.deno"
+export PATH=$BUN_INSTALL/bin:$DENO_INSTALL/bin:$PATH
+
 if has kubectl; then
     source <(kubectl completion bash)
 
