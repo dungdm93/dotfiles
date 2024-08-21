@@ -248,6 +248,10 @@ if has mc; then
     complete -C "$(which mc)" mc
 fi
 
+if has aws_completer; then
+    complete -C "$(which aws_completer)" aws
+fi
+
 # ref: https://github.com/apache/avro/tree/master/lang/java/tools
 alias avro-tools="java -jar $HOME/.local/bin/avro-tools-1.11.0.jar"
 
