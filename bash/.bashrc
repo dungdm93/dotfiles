@@ -171,6 +171,10 @@ if has kubectl; then
     export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 fi
 
+if has istioctl; then
+    source <(istioctl completion bash)
+fi
+
 if has helm; then
     source <(helm completion bash)
 fi
