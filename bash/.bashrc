@@ -173,6 +173,9 @@ fi
 
 if has istioctl; then
     source <(istioctl completion bash)
+
+    alias i=istioctl
+    complete -o default -F __start_istioctl i
 fi
 
 if has helm; then
