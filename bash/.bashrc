@@ -122,6 +122,7 @@ export PATH="$(aqua root-dir)/bin:$PATH"
 source <(aqua completion bash)
 
 eval "$(starship init bash)"
+eval "$(fzf --bash)"
 
 has() {
     command -v "$1" 1>/dev/null 2>&1
