@@ -158,6 +158,14 @@ symbol = '☸ '
 context_pattern = "gke_(?P<project>[\\w-]+)_(?P<location>[\\w-]+)_(?P<cluster>[\\w-]+)"
 context_alias = "gke/$project/$cluster"
 
+[[kubernetes.contexts]]
+context_pattern = "arn:aws:eks:(?P<location>[\\w-]+):(?P<account_id>\\d+):cluster/(?P<cluster>[\\w-]+)"
+context_alias = "eks/$cluster"
+
+[[kubernetes.contexts]]
+context_pattern = "(?P<username>[\\w-]+)@(?P<cluster>[\\w-]+)\\.(?P<location>[\\w-]+)\\.eksctl\\.io"
+context_alias = "eks/$cluster"
+
 [lua]
 format = '\[[$symbol($version)]($style)\]'
 symbol = ' '
