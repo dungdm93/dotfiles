@@ -117,51 +117,71 @@ if ! shopt -oq posix; then
 fi
 
 ###############################################################
-export AQUA_GLOBAL_CONFIG=$HOME/aqua.yaml
-export PATH="$(aqua root-dir)/bin:$PATH"
-source <(aqua completion bash)
-
-eval "$(starship init bash)"
-eval "$(fzf --bash)"
-
 has() {
     command -v "$1" 1>/dev/null 2>&1
 }
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh"
-[ -s "$NVM_DIR/bash_completion" ] && source "$NVM_DIR/bash_completion"
+eval "$(starship init bash)"
+eval "$(fzf --bash)"
 
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$SDKMAN_DIR/bin/sdkman-init.sh" ]] && source "$SDKMAN_DIR/bin/sdkman-init.sh"
-
-export CONDA_DIR="$HOME/.conda"
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$($CONDA_DIR/bin/conda 'shell.bash' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "$CONDA_DIR/etc/profile.d/conda.sh" ]; then
-        . "$CONDA_DIR/etc/profile.d/conda.sh"
-    else
-        export PATH="$CONDA_DIR/bin:$PATH"
-    fi
+if [ -d "$HOME/.nvm" ]; then
+    export NVM_DIR="$HOME/.nvm"
+    [ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh"
+    [ -s "$NVM_DIR/bash_completion" ] && source "$NVM_DIR/bash_completion"
 fi
-unset __conda_setup
-# <<< conda initialize <<<
+
+if [ -d "$HOME/.sdkman" ]; then
+    export SDKMAN_DIR="$HOME/.sdkman"
+    [[ -s "$SDKMAN_DIR/bin/sdkman-init.sh" ]] && source "$SDKMAN_DIR/bin/sdkman-init.sh"
+fi
+
+if [ -d "$HOME/.conda" ]; then
+    export CONDA_DIR="$HOME/.conda"
+
+    # >>> conda initialize >>>
+    # !! Contents within this block are managed by 'conda init' !!
+    __conda_setup="$($CONDA_DIR/bin/conda 'shell.bash' 'hook' 2> /dev/null)"
+    if [ $? -eq 0 ]; then
+        eval "$__conda_setup"
+    else
+        if [ -f "$CONDA_DIR/etc/profile.d/conda.sh" ]; then
+            . "$CONDA_DIR/etc/profile.d/conda.sh"
+        else
+            export PATH="$CONDA_DIR/bin:$PATH"
+        fi
+    fi
+    unset __conda_setup
+    # <<< conda initialize <<<
+fi
 
 export PATH="$HOME/go/bin:/usr/local/go/bin:$PATH"
 
 # bun & deno
-export BUN_INSTALL="$HOME/.bun"
-export DENO_INSTALL="$HOME/.deno"
-export PATH=$BUN_INSTALL/bin:$DENO_INSTALL/bin:$PATH
+if [ -d "$HOME/.nvm" ]; then
+    export BUN_INSTALL="$HOME/.bun"
+    export PATH=$BUN_INSTALL/bin:$PATH
+fi
+
+if [ -d "$HOME/.nvm" ]; then
+    export DENO_INSTALL="$HOME/.deno"
+    export PATH=$DENO_INSTALL/bin:$PATH
+fi
 
 # dotnet
-export DOTNET_ROOT=$HOME/.dotnet
-export PATH=$DOTNET_ROOT:$DOTNET_ROOT/tools:$PATH
+if [ -d "$HOME/.dotnet" ]; then
+    export DOTNET_ROOT=$HOME/.dotnet
+    export PATH=$DOTNET_ROOT:$DOTNET_ROOT/tools:$PATH
+fi
+
+if has aqua; then
+    export AQUA_GLOBAL_CONFIG=$HOME/aqua.yaml
+    export PATH="$(aqua root-dir)/bin:$PATH"
+    source <(aqua completion bash)
+fi
+
+if has uv; then
+    eval "$(uv generate-shell-completion bash)"
+fi
 
 if has kubectl; then
     source <(kubectl completion bash)
