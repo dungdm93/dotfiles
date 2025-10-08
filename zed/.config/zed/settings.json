@@ -1,0 +1,25 @@
+// https://zed.dev/docs/configuring-zed
+{
+  "icon_theme": "VSCode Icons (Dark)",
+  "ui_font_family": "FiraCode Nerd Font",
+  "ui_font_size": 18,
+  "buffer_font_family": "FiraCode Nerd Font Mono",
+  "format_on_save": "off",
+  "title_bar": {
+    "show_branch_icon": true,
+    "show_branch_name": true,
+    "show_project_items": true,
+    "show_menus": false
+  },
+  "minimap": {
+    "show": "auto"
+  },
+  "tabs": {
+    "git_status": true,
+    "file_icons": true,
+    "show_diagnostics": "all"
+  },
+  "preferred_line_length": 120,
+  "wrap_guides": [120],
+  "show_wrap_guides": true
+}
