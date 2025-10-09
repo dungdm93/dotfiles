@@ -1,4 +1,12 @@
 {
+    "window.zoomLevel": 1,
+    "window.titleBarStyle": "custom",
+    "workbench.colorTheme": "Default Dark+",
+    "workbench.editor.empty.hint": "hidden",
+    "workbench.iconTheme": "vscode-icons",
+    "editor.fontFamily": "FiraCode Nerd Font Mono",
+    "editor.fontLigatures": true,
+    "editor.accessibilitySupport": "off",
     "terminal.integrated.fontFamily": "FiraCode Nerd Font",
     "terminal.integrated.defaultProfile.windows": "WSL",
     "terminal.integrated.profiles.windows": {
@@ -7,11 +15,4 @@
             "icon": "terminal-linux"
         },
     },
-    "asciidoc.use_kroki": true,
-    "editor.accessibilitySupport": "off",
-    "window.titleBarStyle": "custom",
-    "window.zoomLevel": 1,
-    "workbench.colorTheme": "Default Dark+",
-    "workbench.editor.empty.hint": "hidden",
-    "workbench.iconTheme": "vscode-icons",
 }
