@@ -165,6 +165,7 @@ fi
 if [ -d "$HOME/.nvm" ]; then
     export DENO_INSTALL="$HOME/.deno"
     export PATH=$DENO_INSTALL/bin:$PATH
+    source $HOME/.local/share/bash-completion/completions/deno.bash
 fi
 
 # dotnet
