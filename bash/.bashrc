@@ -136,22 +136,18 @@ if [ -d "$HOME/.sdkman" ]; then
 fi
 
 if [ -d "$HOME/.conda" ]; then
-    export CONDA_DIR="$HOME/.conda"
-
-    # >>> conda initialize >>>
-    # !! Contents within this block are managed by 'conda init' !!
-    __conda_setup="$($CONDA_DIR/bin/conda 'shell.bash' 'hook' 2> /dev/null)"
+    # Using Miniforge instead of Miniconda
+    # >>> mamba initialize >>>
+    export MAMBA_ROOT_PREFIX="$HOME/.conda"
+    MAMBA_EXE="$MAMBA_ROOT_PREFIX/bin/mamba"
+    __mamba_setup="$("$MAMBA_EXE" shell hook --shell bash --root-prefix "$MAMBA_ROOT_PREFIX" 2> /dev/null)"
     if [ $? -eq 0 ]; then
-        eval "$__conda_setup"
+        eval "$__mamba_setup"
     else
-        if [ -f "$CONDA_DIR/etc/profile.d/conda.sh" ]; then
-            . "$CONDA_DIR/etc/profile.d/conda.sh"
-        else
-            export PATH="$CONDA_DIR/bin:$PATH"
-        fi
+        alias mamba="$MAMBA_EXE"  # Fallback on help from mamba activate
     fi
-    unset __conda_setup
-    # <<< conda initialize <<<
+    unset __mamba_setup
+    # <<< mamba initialize <<<
 fi
 
 export PATH="$HOME/go/bin:/usr/local/go/bin:$PATH"
