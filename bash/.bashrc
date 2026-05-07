@@ -148,6 +148,8 @@ if [ -d "$HOME/.conda" ]; then
     fi
     unset __mamba_setup
     # <<< mamba initialize <<<
+
+    alias conda=mamba
 fi
 
 export PATH="$HOME/go/bin:/usr/local/go/bin:$PATH"
