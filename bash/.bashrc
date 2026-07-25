@@ -155,12 +155,12 @@ fi
 export PATH="$HOME/go/bin:/usr/local/go/bin:$PATH"
 
 # bun & deno
-if [ -d "$HOME/.nvm" ]; then
+if [ -d "$HOME/.bun" ]; then
     export BUN_INSTALL="$HOME/.bun"
     export PATH=$BUN_INSTALL/bin:$PATH
 fi
 
-if [ -d "$HOME/.nvm" ]; then
+if [ -d "$HOME/.deno" ]; then
     export DENO_INSTALL="$HOME/.deno"
     export PATH=$DENO_INSTALL/bin:$PATH
     source $HOME/.local/share/bash-completion/completions/deno.bash
