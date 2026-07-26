@@ -1,7 +1,7 @@
 {
     "window.zoomLevel": 1,
     "window.titleBarStyle": "custom",
-    "workbench.colorTheme": "One Dark Modern",
+    "workbench.colorTheme": "Visual Studio Dark",
     "workbench.editor.empty.hint": "hidden",
     "workbench.iconTheme": "vscode-icons",
     "editor.fontFamily": "FiraCode Nerd Font Mono",
